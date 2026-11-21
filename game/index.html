@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Milo's Garden — Spot the Difference</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="hud-left">
+      <h1>Milo's Garden</h1>
+      <span id="level-name">Level 1 · Sunny Garden</span>
+    </div>
+    <div class="hud-mid">
+      <div class="stat"><span class="stat-label">Found</span><span id="found-count">0 / 5</span></div>
+      <div class="stat"><span class="stat-label">Left</span><span id="left-count">5</span></div>
+      <div class="stat"><span class="stat-label">Time</span><span id="timer">90</span></div>
+      <div class="stat"><span class="stat-label">Score</span><span id="score">0</span></div>
+    </div>
+    <div class="hud-right">
+      <button id="hint-btn" type="button">Hint (3)</button>
+      <button id="sound-btn" type="button">Sound: on</button>
+      <button id="restart-btn" type="button">Restart</button>
+    </div>
+  </header>
+
+  <main id="boards">
+    <section class="panel">
+      <div class="panel-tag">A · Original</div>
+      <canvas id="panel-a" width="560" height="420"></canvas>
+    </section>
+    <section class="panel">
+      <div class="panel-tag">B · Spot the changes</div>
+      <canvas id="panel-b" width="560" height="420"></canvas>
+    </section>
+  </main>
+
+  <footer id="help">
+    <span>Click a difference on either picture — it gets circled on both.</span>
+    <span class="keys">H hint · R restart · M sound · 1/2/3 level</span>
+  </footer>
+
+  <div id="overlay" class="hidden">
+    <div id="overlay-card">
+      <h2 id="overlay-title">Milo's Garden</h2>
+      <p id="overlay-text"></p>
+      <div id="overlay-stars"></div>
+      <button id="overlay-btn" type="button">Start playing</button>
+    </div>
+  </div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
